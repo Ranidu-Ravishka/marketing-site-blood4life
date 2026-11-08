@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title>Blood4Life concept B: life and connection</title>
+  <rect width="256" height="256" rx="52" fill="#8F2638"/>
+  <path fill="#F8F7F4" d="M128 43c-2 12-49 66-49 105 0 31 21 52 49 52s49-21 49-52c0-39-47-93-49-105Z"/>
+  <path d="M78 151c16-16 30-23 50-23 20 0 34 7 50 23" fill="none" stroke="#8F2638" stroke-linecap="round" stroke-width="9"/>
+  <circle cx="78" cy="151" r="8" fill="#8F2638"/>
+  <circle cx="178" cy="151" r="8" fill="#8F2638"/>
+</svg>

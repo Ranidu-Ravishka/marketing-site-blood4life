@@ -9,8 +9,8 @@ export const site = {
 
 export const nav = [
   { href: "#purpose", label: "About" },
-  { href: "#experience", label: "Experience" },
   { href: "#features", label: "Features" },
+  { href: "#experience", label: "Experience" },
   { href: "#technology", label: "Technology" },
   { href: "#download", label: "Download" },
 ] as const;

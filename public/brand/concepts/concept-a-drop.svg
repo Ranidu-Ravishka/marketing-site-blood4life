@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title>Blood4Life concept A: minimal blood drop</title>
+  <rect width="256" height="256" rx="52" fill="#F1E5E6"/>
+  <path fill="#8F2638" d="M128 42c-2 12-55 71-55 112 0 34 24 57 55 57s55-23 55-57c0-41-53-100-55-112Z"/>
+  <path fill="#F8F7F4" d="M102 143c0-17 14-35 22-46-3 15-1 27 7 37 8 10 12 20 12 29 0 13-9 23-22 23s-19-9-19-22c0-7 0-13 0-21Z" opacity=".32"/>
+</svg>

@@ -35,8 +35,12 @@ export const metadata: Metadata = {
     description: "One donation. A world of difference.",
   },
   icons: {
-    icon: "/app-icon.png",
-    apple: "/app-icon.png",
+    icon: [
+      { url: "/brand/favicon.ico" },
+      { url: "/brand/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/brand/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: { url: "/brand/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
   },
 };
 
@@ -50,6 +54,22 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteHeader />
         {children}
         <SiteFooter />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: site.name,
+              applicationCategory: "HealthApplication",
+              operatingSystem: "Android, iOS",
+              description:
+                "Blood4Life connects blood donors, recipients, and blood banks through a thoughtfully designed mobile experience.",
+              image: `${site.url}/brand/icon-512.png`,
+              url: site.url,
+            }),
+          }}
+        />
       </body>
     </html>
   );
