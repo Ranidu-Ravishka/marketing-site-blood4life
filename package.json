@@ -6,19 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
+    "motion": "^14.10.1",
     "next": "^16.4.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@tailwindcss/postcss": "^4.3.5",
     "@types/node": "^22.10.5",
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^15.5.29",
+    "prettier": "^3.9.10",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.5",
     "typescript": "^5.7.2"
   }
 }

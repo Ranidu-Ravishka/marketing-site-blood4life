@@ -1,32 +1,56 @@
 import type { Metadata } from "next";
+import { Geist } from "next/font/google";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { site } from "@/lib/site";
 import "./globals.css";
 
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://blood4life.vercel.app"),
-  title: "Blood4Life | Connecting People. Supporting Lives.",
+  metadataBase: new URL(site.url),
+  title: {
+    default: "Blood4Life — A little kindness. A lifetime of impact.",
+    template: "%s — Blood4Life",
+  },
   description:
-    "Discover Blood4Life, a mobile blood donation platform designed to connect donors, recipients, and blood banks through technology.",
+    "Blood4Life connects blood donors, recipients, and blood banks through a thoughtfully designed mobile experience.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Blood4Life | Connecting People. Supporting Lives.",
+    title: "Blood4Life — A little kindness. A lifetime of impact.",
     description:
-      "A portfolio presentation of a mobile platform for more accessible blood donation coordination.",
+      "A premium presentation of Blood4Life, the mobile platform connecting donors, recipients, and blood banks.",
     type: "website",
     url: "/",
     siteName: "Blood4Life",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blood4Life | Connecting People. Supporting Lives.",
-    description: "Technology with a purpose: explore the Blood4Life project.",
+    title: "Blood4Life — A little kindness. A lifetime of impact.",
+    description: "One donation. A world of difference.",
   },
-  icons: { icon: "/app-icon.png", apple: "/app-icon.png" },
+  icons: {
+    icon: "/app-icon.png",
+    apple: "/app-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={geist.variable}>
+      <body className="min-h-screen bg-background font-sans text-foreground antialiased">
+        <a className="skip-link" href="#content">
+          Skip to content
+        </a>
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }
